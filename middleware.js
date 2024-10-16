@@ -25,11 +25,11 @@ module.exports.validateListing= (req, res, next)=>{
     }
 }
 
-//MIDDLEWARE TO CHECK WHETHER THE USER IS LOGGEN IN OR NOT BEFORE CREATING/EDITING/DELETING A LISTING
+//MIDDLEWARE TO CHECK WHETHER THE USER IS LOGGED IN OR NOT BEFORE CREATING/EDITING/DELETING A LISTING
 module.exports.isLoggedIn= (req, res, next) =>{
     if(!req.isAuthenticated()) {
         req.session.redirectUrl= req.originalUrl;
-        req.flash("error", "You must be logged in to create/edit/delete a listing!");
+        req.flash("error", "You must be logged in to create a listing!");
         return res.redirect("/login");
     }
     next();
