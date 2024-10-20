@@ -50,6 +50,10 @@ body{
     opacity: 0.8;
 }
 
+.f-info-socials fa-brands{
+    text-decoration: none;
+}
+
 .f-info{
     text-align: center;
     display: flex;

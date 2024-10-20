@@ -1,6 +1,5 @@
 const mongoose= require('mongoose');
 const Review = require('./review.js');
-const { string } = require('joi');
 const Schema= mongoose.Schema;
 
 const listingSchema= new Schema({
