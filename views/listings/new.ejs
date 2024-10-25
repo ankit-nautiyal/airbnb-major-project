@@ -14,7 +14,7 @@
                     
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <input type="text" name="listing[description]" placeholder="Enter description" class="form-control" required>
+                        <textarea name="listing[description]"  class="form-control" cols="30" rows="5" placeholder="Describe your listing" required></textarea>
                         <div class="invalid-feedback">Please enter a valid description!</div>
                     </div>
             
@@ -39,7 +39,7 @@
                     
                     <div class="mb-3  ">
                         <label for="location" class="form-label">Enter location</label>
-                        <input type="text" name="listing[location]" placeholder="E.g.: Jaipur, Rajasthan" class="form-control" required pattern="^(?=(.*[A-Za-z]){3,})([A-Za-z0-9\s,]*)$">
+                        <input type="text" name="listing[location]" placeholder="E.g.: Jaipur, Rajasthan" class="form-control" required pattern="^(?=(.*[A-Za-z]){3,})([A-Za-z0-9\s,.-]*)$">
                         <div class="invalid-feedback">Please enter a valid location!</div>
                     </div>
                     

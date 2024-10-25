@@ -13,7 +13,7 @@
                     
                     <div class="mb-3">
                         <label for="description " class="form-label">Description </label>
-                        <input type="text" name="listing[description]" value="<%= listing.description  %>" class="form-control" required>
+                        <textarea name="listing[description]"  class="form-control" cols="30" rows="5" required> <%= listing.description %> </textarea>
                         <div class="invalid-feedback">Please enter a valid description!</div>
                     </div>
 
@@ -35,14 +35,14 @@
                         
                         <div class="mb-3 col-md-8">
                             <label for="country" class="form-label">Country</label>
-                            <input type="text" name="listing[country]" value="<%= listing.country %>" class="form-control" required pattern="[A-Za-z\s]+">
+                            <input type="text" name="listing[country]" value="<%= listing.country %>" class="form-control" pattern="[A-Za-z\s]+" required>
                             <div class="invalid-feedback">Please enter a valid Country name!</div>
                         </div>
                     </div>
         
                     <div class="mb-3 ">
                         <label for="location" class="form-label">Location</label>
-                        <input type="text" name="listing[location]" value="<%= listing.location%>" class="form-control" required pattern="^(?=(.*[A-Za-z]){3,})([A-Za-z0-9\s,]*)$">
+                        <input type="text" name="listing[location]" value="<%= listing.location%>" class="form-control" pattern="^(?=(.*[A-Za-z]){3,})([A-Za-z0-9\s,.-]*)$" required>
                         <div class="invalid-feedback">Please enter a valid location!</div>
                     </div>
 

@@ -97,9 +97,9 @@ app.listen(8080, ()=>{
 });
 
 //ROOT ROUTE:
-app.get("/", (req, res)=>{
-    res.send("root is working- wanderlust");
-});
+// app.get("/", (req, res)=>{
+//     res.send("root is working- wanderlust");
+// });
 
 
 //TO HANDLE ERROR FOR ALL PAGES THAT DON'T EXIST ON THE SERVER/WEBSITE
