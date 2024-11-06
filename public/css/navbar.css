@@ -1,6 +1,6 @@
-/* .imgAirbnb {
+.imgAirbnb {
     margin-top: 3px;
-    margin-left: .75rem;
+    margin-left: 5.25rem;
     height: 2rem;
     width: 6.2rem;
     filter: contrast(2);
@@ -37,7 +37,7 @@
     min-width: 5.5rem;
     background-color: rgb(255, 255, 255);
     padding: .5rem .25px .2px .75rem;
-    margin-right: 1rem;
+    margin-right: 5.25rem;
     border-radius: 50px;
     border: .5px solid rgba(128, 128, 128, 0.503);
     cursor: pointer;
@@ -187,4 +187,4 @@
     #nav-main-bar {
         height: 4.5rem;
     }
-} */
+}

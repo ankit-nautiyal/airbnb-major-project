@@ -2,7 +2,9 @@ const mongoose= require('mongoose');
 const Schema= mongoose.Schema;
 
 const reviewSchema= new Schema({
-    comment: String,
+    comment: {
+        type: String,
+    },
     rating: {
         type: Number,
         min:1,
@@ -15,7 +17,11 @@ const reviewSchema= new Schema({
     author:{
         type: Schema.Types.ObjectId,
         ref: "User",
-    }
+    },
+    listing: {
+        type: Schema.Types.ObjectId,    // add listing id
+        ref: "Listing"
+    },
 });
 
 module.exports= mongoose.model("Review", reviewSchema);

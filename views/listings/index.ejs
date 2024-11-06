@@ -1,22 +1,209 @@
-<% layout("/layouts/boilerplate") %>  <%= success %>
-<body>
-    
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 mt-2">
-        <% for(let listing of allListings) {  %> 
-            <a href="/listings/<%= listing._id %>" class="listing-link">
-                <div class="card col listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img" alt="listing_image" style="height: 20rem;">
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                        <p class="card-text">
+<% layout("/layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/filter.css">
+
+
+<div class="filters-main">
+    <div id="filters">
+        <div class="left_img_button" id="slideButton" style="display: none;">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <a href="/listings/">
+            <div class="filter ALL ps-2 pe-2">
+                <div><img src="/icons/0.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p style="text-decoration: none;">ALL</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Beachfront">
+            <div class="filter Beachfront">
+                <div><img src="/icons/1.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Beachfront</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Cabins">
+            <div class="filter Cabins">
+                <div><img src="/icons/2.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Cabins&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Omg">
+            <div class="filter OMG">
+                <div><img src="/icons/3.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;OMG!&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Lake">
+            <div class="filter Lake">
+                <div><img src="/icons/4.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Lake&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Design">
+            <div class="filter Design">
+                <div><img src="/icons/5.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Design&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Amazing Pools">
+            <div class="filter Amazing-pools">
+                <div><img src="/icons/6.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Amazing pools</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Farms">
+            <div class="filter Farms">
+                <div><img src="/icons/7.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Farms&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Amazing Views">
+            <div class="filter Amazing-views">
+                <div><img src="/icons/8.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Amazing views</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Rooms">
+            <div class="filter Rooms">
+                <div><img src="/icons/9.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Rooms&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Lakefront">
+            <div class="filter Lakefront">
+                <div><img src="/icons/10.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Lakefront</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Tiny Homes">
+            <div class="filter Tiny-homes">
+                <div><img src="/icons/11.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Tiny homes</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Countryside">
+            <div class="filter Countryside">
+                <div><img src="/icons/12.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Countryside</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Treehouse">
+            <div class="filter Treehouse">
+                <div><img src="/icons/13.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Treehouse</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Trending">
+            <div class="filter Trending">
+                <div><img src="/icons/14.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Trending</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Tropical">
+            <div class="filter Tropical">
+                <div><img src="/icons/15.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Tropical</p>
+            </div>
+        </a>
+        <a href="/listings/filter/National Parks">
+            <div class="filter National-parks">
+                <div><img src="/icons/16.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>National parks</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Castles">
+            <div class="filter Castles">
+                <div><img src="/icons/17.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Castles</p>
+            </div>
+            </a>
+        <a href="/listings/filter/Camping">
+            <div class="filter Camping">
+                <div><img src="/icons/18.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Camping</p>
+            </div>
+            </a>
+        <a href="/listings/filter/Top Of The World">
+            <div class="filter Top-of-the-world">
+                <div><img src="/icons/19.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Top of the world</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Luxe">
+            <div class="filter Luxe">
+                <div><img src="/icons/20.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>&nbsp;Luxe&nbsp;</p>
+            </div>
+        </a>
+        <a href="/listings/filter/Iconic Cities">
+            <div class="filter iconic-cities">
+                <div><img src="/icons/21.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Iconic cities</p>
+            </div>
+            </a>
+        <a href="/listings/filter/Earth Homes">
+            <div class="filter Earth-homes">
+                <div><img src="/icons/22.png" alt="icons" style="width: 25px; height: 25px;"></div>
+                <p>Earth homes</p>
+            </div>
+        </a>
+        <div class="right_img_button" id="slideButton">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
+    <div class="tax-toggle tax-filter-icons filtericons me-2 ms-2 " onclick="filterClick()">
+        <div class="form-check form-switch form-check-reverse pe-1" style="cursor: pointer;">
+            <i class="fa-solid fa-sliders" id="filter-icons"></i>
+            <label class="form-check-label" for="filter-icons" style="cursor: pointer;">Filters</label>
+        </div>
+    </div>
+    <div class="tax-toggle tax-filter ">
+        <div class="form-check form-switch form-check-reverse" >
+            <input class="form-check-input tax-switch shadow-none" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="cursor: pointer;">
+            <label class="form-check-label " for="flexSwitchCheckDefault" style="cursor: pointer; margin-top: 3px;">Display total before taxes</label>
+        </div>
+    </div>
+</div>
+<div class="filters-main-1"></div>  
+<div class="tax-toggle tax-sticky">
+    <div class="form-check form-switch form-check-reverse">
+        <input class="form-check-input tax-switch tax-sticky-sticky shadow-none" type="checkbox" role="switch" id="flexSwitchCheckDefaultS" style="cursor: pointer;">
+        <label class="form-check-label" for="flexSwitchCheckDefaultS" style="cursor: pointer;">Display total before taxes</label>
+    </div>
+</div>
+<div class="row row-cols-xxl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-1">
+    <% for (const listing of allListing) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card col listing-card index-res">
+                <div class="index-res-img">
+                    <div class="card-img">
+                        <img class="heart heart-r" src="/icons/heart-red.png" alt="like" style="opacity: 1; z-index: 5;">
+                        <img class="heart heart-b" src="/icons/heart-black.png" alt="like" style="z-index: 6;">
+                        <img src="<%= listing.image.url %>" class="card-img" alt="listing_image" />
+                    </div>
+                    <!-- set date  -->
+                    <%
+                    let day =Math.floor(Math.random() * 4 + 2);   // Random number of nights between 2 and 5
+                    let no = Math.floor(Math.random() * 24 + 1);    // Random start date offset between 1 and 24
+                    let date = (new Date('2024-11-01')).getDate() + no;         // Start date in November 2024
+                    let dateA = (new Date('2024-11-01')).getDate() + no + day;    // End date calculated based on stay duration
+                    let month = Date().split(" ")[1];
+
+                    // Calculate total price for the stay duration
+                    let totalPrice = listing.price * day;
+                    %>
+                    <div class="card-body mt-1 ms-2">
+                        <p class="card-text" style="display: block;">
                             <b><%= listing.title %></b> <br>
-                            &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+                            <span>&nbsp;<%= listing.location %>, <%= listing.country %></span>
+                            <span style="display: block;"><span class="tax-info">&nbsp;<%= day %> nights •</span> &nbsp;<%= date %>-<%- dateA %> &nbsp;&nbsp;<%= month %></span>
+                            <span class="price-info"><span class=" fw-bold">&nbsp;&#8377;<%= listing.price.toLocaleString("en-IN") %> </span>  night</span>
+                            <i class="tax-info tax-underline ms-1"><i class="rs-sign"><b> &#8377;</i><%= totalPrice.toLocaleString("en-In") %></b> &nbsp;total before taxes</i>
                         </p>
                     </div>
                 </div>
-            </a>
-        <% } %>
-    </div>
-</body>
+            </div>
+        </a>
+    <% } %>
+</div>
+<script defer src="/js/filter.js"></script>
 
 

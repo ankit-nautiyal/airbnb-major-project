@@ -7,8 +7,12 @@ module.exports.listingSchema= Joi.object({
         location: Joi.string().required(),
         country: Joi.string().required(),
         price: Joi.number().required().min(0),
-        image: Joi.string().allow("", null)
-    }).required(),
+        image: Joi.string().allow("", null),
+        category: Joi.alternatives().try(
+            Joi.array().items(Joi.string()).min(1), // For multiple categories
+            Joi.string()                            // For a single category
+        )
+    }).required()
 });
 
 module.exports.reviewSchema= Joi.object({
@@ -17,3 +21,12 @@ module.exports.reviewSchema= Joi.object({
         comment: Joi.string().required()
     }).required()
 });
+
+module.exports.userSchema = Joi.object({
+    fName: Joi.string().required().trim(),
+    lName: Joi.string().allow("",null),
+    username: Joi.string().required(),
+	email: Joi.string().required().email(),
+    password: Joi.string().min(8),
+});
+

@@ -1,5 +1,5 @@
 body{
-    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-family: "Nunito Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -7,7 +7,9 @@ body{
 
 .container{
     flex: 1;
+    min-height: 70vh;
 }
+
 
 /* NAVBAR */
 .navbar{
@@ -104,21 +106,73 @@ body{
     background-color: white;
 }
 
+
+/* HEART INSIDE CARD */
+
+.heart {
+    width: 22px;
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 15px;
+    opacity: .6;
+    filter: drop-shadow(1px 1px 5px white);
+    overflow: hidden;
+}
+
+.heart:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1400px) and (min-width: 1199px) {
+    .heart {
+        right: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .heart {
+        right: 105px;
+    }
+}
+
+@media (max-width: 586px) {
+    .heart {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        /* right: 19vw; */
+    }
+
+    .card-img {
+        height: 100%;
+        position: relative;
+        top: -25px;
+    }
+
+    .heart-b {
+        left: -15px;
+    }
+}
+
+@media (width: 767px) {
+    .heart {
+        position: relative;
+        right: 100px;
+    }
+}
+
 /* NEW PAGE */
 .add-btn{
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/* EDIT PAGE */
-.edit-btn{
-    background-color: #fe424d !important;
-    border: none !important;
-}
+
 
 /* SHOW PAGE */
 .show-img{
-    height: 30vh;
+    height: 50vh;
 }
 
 .btns{
@@ -249,4 +303,197 @@ body{
 .ankit a {
     color: white;
     text-decoration: none;
+}
+
+/* update.ejs------------------- */
+
+#imagePreview img,.listingImg-update{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.update-change{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+.update-change > div input{
+    /* display: none; */
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.update-change  div label{
+    font-weight: 600;
+    filter: drop-shadow( 2px 0px 1px black);
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+.update-change  div{
+    background-color: rgb(66, 66, 82);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#password-box,#image-box{
+    display: none;
+}
+.update-change  div:hover{
+    box-shadow: 0px 0px 5px black;
+}
+.update-change  div:active{
+    transform: scale(1.1);
+}
+
+/* indes.ejs style -------------------------------------------------------------------------------------*/
+@media (max-width: 769px) {
+    .index-res {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .index-res-img {
+        width: 320px;
+    }
+
+    .container {
+        display: flex !important;
+        flex-direction: column;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 355px) {
+    .card-img {
+        max-width: 290px;
+        height: 19rem !important;
+        max-width: 290px;
+        overflow: hidden !important;
+        border-radius: 1rem !important;
+        box-shadow: 0px 6px 5px rgb(0, 0, 0) !important;
+        margin-bottom: 15px;
+        margin-left: 15px;
+
+    }
+
+    .card-text {
+        margin-left: 15px;
+    }
+}
+
+/* edit.ejs style -------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .edit-btn {
+        width: 4rem !important;
+    }
+
+    .category-choose {
+        display: none;
+    }
+
+    #map {
+        height: 350px !important;
+    }
+
+    .mapImg {
+        /* padding: none; */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.listingImg,.listingImg img {
+    width: 200px !important;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* new.ejs style -------------------------------------------------------------------------------------*/
+.form-label {
+    font-weight: 700;
+}
+
+.category-choose,
+.category-added {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.category-choose p,
+.category-added {
+    font-size: .90rem;
+    color: grey;
+    line-height: 5px;
+}
+
+.category-choose p b,
+.category-added p b {
+    font-weight: 600;
+}
+
+#category {
+    padding: 8px;
+}
+
+#category option {
+    border-radius: 50px;
+    border: .5px solid rgba(0, 0, 0, 0.486);
+    padding: 2px 10px 5px 10px;
+    background-color: rgba(169, 169, 169, 0.322);
+    margin: 0px;
+    margin-bottom: 3px;
+}
+
+.category-added {
+    border: .5px solid rgba(0, 0, 0, 0.448);
+    border-radius: 50px;
+    color: black;
+    line-height: 6px;
+    padding: 10px 8px 0px 8px;
+}
+
+.category-added p {
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-left: 5px;
+
+}
+
+/* -------hover effect--------------------------------------------------------------------------------------------- */
+.show-card-img {
+    /* height: 17rem !important; */
+    overflow: hidden !important;
+    border-radius: 1rem !important;
+    display: flex;
+}
+
+.card-img {
+    height: 20rem !important;
+    max-width: 320px;
+    overflow: hidden !important;
+    /* border-radius: 1rem !important; */
+    border-radius: 10px !important;
+    /* box-shadow: 0px 6px 5px black !important; */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.654) !important;
+    margin-bottom: 10px;
+}
+
+.card-img:hover {
+    transform: scale(1.08) !important;
+    transition: .5s ease-in-out 0s;
+    filter: contrast(1.25);
+    opacity: 1;
+    cursor: pointer;
 }

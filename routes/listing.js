@@ -17,6 +17,10 @@ router.route("/")
 //NEW LISTING ROUTE:
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
+
+//SEARCH ROUTE:
+router.get("/search", wrapAsync(listingController.search));
+
 //SHOW, UPDATE & DELETE LISTING ROUTE:
 router.route("/:id")
     .get( wrapAsync ( listingController.showListing))
@@ -24,8 +28,17 @@ router.route("/:id")
     .delete(isLoggedIn, isOwner, wrapAsync (listingController.destroyListing));
 
 
+
 //EDIT LISTING ROUTE:
 router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync ( listingController.renderEditForm));
+
+
+//FILTER ROUTE:
+router.get("/filter/:id", wrapAsync(listingController.filter));                              //Filter Route-----------------
+
+//FILTER BUTTON ROUTE: 
+router.get("/filterbtn",listingController.filterbtn);                                       //FilterButton Route-----------------
+
 
 
 module.exports= router;
