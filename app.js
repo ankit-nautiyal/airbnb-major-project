@@ -14,6 +14,7 @@ const MongoStore = require('connect-mongo');
 const passport= require("passport");
 const flash = require('connect-flash');
 const LocalStrategy= require("passport-local");
+const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const User= require("./models/user.js");
 
 
@@ -21,6 +22,7 @@ const listingRouter= require("./routes/listing.js");
 const reviewRouter= require("./routes/review.js");
 const userRouter= require("./routes/user.js");
 const profileRouter = require("./routes/profile.js");
+const googleRoute = require("./routes/google.js");
 
 
 app.set("views", path.join(__dirname, "views"));
@@ -76,6 +78,7 @@ app.use(passport.session());
 app.use(flash());
 passport.use(new LocalStrategy(User.authenticate()));
 
+
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -92,6 +95,7 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 app.use("/profile", profileRouter);
+app.use("/auth/google", googleRoute);
 
 //LISTEN PORT:
 app.listen(8080, ()=>{

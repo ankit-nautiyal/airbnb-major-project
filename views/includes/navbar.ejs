@@ -13,13 +13,13 @@
       </div>
       <div class="nav-user nav-hover" >
         <div>
-          <!-- <img src="/icons/navbar-icon.png" id="png-img-bar"> -->
-          <% if(currUser && currUser.image && currUser.image.url) { %>
+          <img src="/icons/navbar-icon.png" id="png-img-bar">
+          <% if(currUser && currUser.image.url) { %>
             <img src="<%= currUser.image.url %>" alt="Profile" id="png-img-user">
           <% } else { %>
               <img src="/icons/navbar-icon-user.png" alt="User" id="png-img-user">
           <% } %>
-          <!-- <img src="icons/navbar-icon-cross.png" id="png-img-cross"> -->
+          <img src="icons/navbar-icon-cross.png" id="png-img-cross">
         </div>
       </div>
       <div class="user-fnx" style="display: none;">

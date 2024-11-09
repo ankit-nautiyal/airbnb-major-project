@@ -18,9 +18,12 @@ const userSchema= new Schema({
 		url: String,
 		filename: String,
     },
-    providerId: String,         // --------google------------
+    // --------for google OAuth------------
+    providerId: String,        
     provider: String,
-})
+});
+
+
 userSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('User', userSchema);
