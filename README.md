@@ -18,8 +18,7 @@ Developed a feature-rich full-stack web application inspired by Airbnb, leveragi
 - Mongoose for MongoDB Object Modeling
 - Multer for File Uploads
 - Passport Local for Local Authentication
-- Passport Facebook for Facebook Authentication
-- Passport Google OAuth20 for Google Authentication
+- Passport Google OAuth 2.0 for Google Authentication
 - Passport Local Mongoose for Mongoose-Specific Authentication
 
 🌟 Key Features:
