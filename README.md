@@ -1,10 +1,10 @@
-🌐 #Project Overview:
-##Developed a feature-rich full-stack web application inspired by Airbnb, leveraging the MongoDB, Express.js, Node.js
+# 🌐Project Overview:
+## Developed a feature-rich full-stack web application inspired by Airbnb, leveraging the MongoDB, Express.js, Node.js
 
 ![image](https://github.com/user-attachments/assets/d6b39cc2-1b0f-41d6-a991-e4328da88b00)
 
 
-🛠️ ###Technologies & Packages Used:
+### 🛠️Technologies & Packages Used:
 - MongoDB
 - Express.js
 - Node.js
@@ -24,7 +24,7 @@
 - Passport Google OAuth 2.0 for Google Authentication
 - Passport Local Mongoose for Mongoose-Specific Authentication
 
-🌟 ###Key Features:
+### 🌟Key Features:
 - User Authentication: Login, Logout, and User Profile Section
 - CRUD Operations: Add, Edit, and Delete Listings
 - Review System: Add and Delete Reviews
