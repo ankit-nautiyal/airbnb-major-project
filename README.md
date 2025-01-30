@@ -24,6 +24,8 @@
 - Passport Google OAuth 2.0 for Google Authentication
 - Passport Local Mongoose for Mongoose-Specific Authentication
 
+---
+
 ### 🌟Key Features:
 - User Authentication: Login, Logout, and User Profile Section
 - CRUD Operations: Add, Edit, and Delete Listings
