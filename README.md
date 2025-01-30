@@ -34,3 +34,10 @@
 - Account Management: Update User Account and Password
 - User Data Security: Password Hashing and Encryption
 - Interactive Maps: Leveraging Mapbox for Location Visualization
+---
+### Author :
+- Name: Ankit Nautiyal
+- Email: nautiyalankit65@gmail.com
+---
+### Hosted Link:
+URL: https://airbnb-major-project-ankit.onrender.com/
