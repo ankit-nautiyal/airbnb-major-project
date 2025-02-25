@@ -1,6 +1,7 @@
 # 🌐Project Overview:
 ## Developed a feature-rich full-stack web application inspired by Airbnb, leveraging the MongoDB, Express.js, Node.js
 
+### Project Snapshots:
 ![image](https://github.com/user-attachments/assets/d6b39cc2-1b0f-41d6-a991-e4328da88b00)
 ![image](https://github.com/user-attachments/assets/f689a067-6a35-4ce1-8d4f-5ea9b9cef499)
 ![image](https://github.com/user-attachments/assets/fefb8088-c75a-4790-94d6-7d0940149775)
@@ -25,8 +26,8 @@
 ![image](https://github.com/user-attachments/assets/286f27fb-b02c-4a45-9e48-428cc4f0e98a)
 ![image](https://github.com/user-attachments/assets/d90f6b51-2fa6-40e9-a7b5-9e0e423a6ee8)
 ![image](https://github.com/user-attachments/assets/a8d3e4e5-219b-4746-bd54-33f234119bd4)
-![image](https://github.com/user-attachments/assets/7a06d56e-200f-433b-a3f7-b3e896c07157)
 ![image](https://github.com/user-attachments/assets/068ab43e-d2ee-4011-bd23-2ebd33f23167)
+![image](https://github.com/user-attachments/assets/7a06d56e-200f-433b-a3f7-b3e896c07157)
 ![image](https://github.com/user-attachments/assets/837b666c-4266-420a-a86f-95e3432359c3)
 ![image](https://github.com/user-attachments/assets/4abb8fab-6543-4749-934c-42a1fad785b5)
 ![image](https://github.com/user-attachments/assets/691833e1-225a-4236-90c0-53108d09aae8)
