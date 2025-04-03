@@ -18,7 +18,7 @@ const userSchema= new Schema({
 		url: String,
 		filename: String,
     },
-    // --------for google OAuth------------
+    // --------for google OAuth-------------
     providerId: String,        
     provider: String,
 });
