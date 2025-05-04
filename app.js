@@ -14,7 +14,6 @@ const MongoStore = require('connect-mongo');
 const passport= require("passport");
 const flash = require('connect-flash');
 const LocalStrategy= require("passport-local");
-const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const User= require("./models/user.js");
 
 
@@ -53,7 +52,7 @@ const store= MongoStore.create({
     crypto: {
         secret: process.env.SECRET
     },
-    touchAfter: 24 * 3600 // time period in seconds, here 24hours taken
+    touchAfter: 24 * 3600 // time period in seconds, here 24 hours taken
 });
 
 store.on("error", ()=>{

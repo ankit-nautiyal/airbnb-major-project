@@ -6,7 +6,6 @@ const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL;
 
 var GoogleStrategy = require("passport-google-oauth2").Strategy;
 
-
 passport.use(
 	new GoogleStrategy(
 		{

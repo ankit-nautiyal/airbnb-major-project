@@ -123,28 +123,6 @@ module.exports.isReviewAuthorProfile = async (req, res, next) => {
 };
 
 
-// module.exports.isReviewAuthorProfile = async (req, res, next) => {
-// 	try {
-// 		const { id, reviewId } = req.params;
-// 		const review = await Review.findById(reviewId);
-
-// 		if (!review) {
-// 			req.flash("error", "Review not found.");
-// 			return res.redirect("/profile"); // Redirecting to profile if review isn't found
-// 		}
-
-// 		if (!review.author.equals(res.locals.currUser._id)) {
-// 			req.flash("error", "You are not the author of this review");
-// 			return res.redirect("/profile"); // Redirect back to profile for unauthorized users
-// 		}
-		
-// 		next();
-// 	} catch (err) {
-// 		console.error("Error in isReviewAuthorProfile middleware:", err);
-// 		next(new ExpressError(400, "This Review Page is not valid"));
-// 	}
-// };
-
 
 //----------isReviewAll-----------
 module.exports.isReviewAll = async (req, res, next) => {

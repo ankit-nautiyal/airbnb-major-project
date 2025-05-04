@@ -153,6 +153,7 @@
 .tax-filter {
     justify-self: flex-end;
     min-width: 280px;
+    position: sticky;
 }
 
 .tax-sticky-sticky {
@@ -169,6 +170,7 @@
     height: 23px;
     width: 2.3rem !important;
     margin-left: 5px !important;
+    /* margin-bottom: 25rem; */
 }
 
 .form-switch .form-check-input {
@@ -178,6 +180,7 @@
 
 .tax-sticky {
     display: none;
+    position: sticky;
 }
 
 .tax-filter-icon {
